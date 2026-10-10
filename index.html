@@ -41,8 +41,122 @@
       </a>
     </nav>
   </aside>
+       <!-- Content Area -->
+  <!-- Content Area -->
+  <div class="flex-1 flex flex-col overflow-hidden">
+    
+    <!-- 2. TOP BAR -->
+    <header class="h-16 flex items-center justify-between px-4 sm:px-6 bg-white border-b border-slate-200 shrink-0">
+      <div class="flex items-center gap-4">
+        <!-- Mobile Menu Button (Visible only below lg:) -->
+        <button class="lg:hidden p-2 text-slate-500 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <h1 class="text-xl font-semibold text-slate-800">Dashboard</h1>
+      </div>
+      
+      <div class="flex items-center gap-4 sm:gap-6">
+        <!-- Search Input -->
+        <div class="hidden sm:block relative">
+          <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-colors w-64">
+        </div>
+        <!-- User Avatar -->
+        <img src="https://ui-avatars.com/api/?name=User+Name&background=10b981&color=fff" alt="User Avatar" class="w-9 h-9 rounded-full cursor-pointer hover:ring-2 hover:ring-emerald-500 transition-all">
+      </div>
+    </header>
 
-  </body>
+    <!-- Scrollable Main Content -->
+    <main class="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50 p-4 sm:p-6">
+      
+      <!-- 3. STAT CARDS (1 col mobile, 2 tablet md:, 4 desktop xl:) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+        <div class="card flex flex-col">
+          <span class="text-sm font-medium text-slate-500">Total Users</span>
+          <span class="text-2xl font-bold text-slate-800 mt-2">14,231</span>
+          <span class="text-sm font-medium text-emerald-600 mt-2">+12% from last month</span>
+        </div>
+        <div class="card flex flex-col">
+          <span class="text-sm font-medium text-slate-500">Revenue</span>
+          <span class="text-2xl font-bold text-slate-800 mt-2">$42,500</span>
+          <span class="text-sm font-medium text-emerald-600 mt-2">+8.2% from last month</span>
+        </div>
+        <div class="card flex flex-col">
+          <span class="text-sm font-medium text-slate-500">New Orders</span>
+          <span class="text-2xl font-bold text-slate-800 mt-2">1,240</span>
+          <span class="text-sm font-medium text-red-600 mt-2">-3% from last month</span>
+        </div>
+        <div class="card flex flex-col">
+          <span class="text-sm font-medium text-slate-500">Growth Rate</span>
+          <span class="text-2xl font-bold text-slate-800 mt-2">24.5%</span>
+          <span class="text-sm font-medium text-emerald-600 mt-2">+4.1% from last month</span>
+        </div>
+      </div>
+
+      <!-- 4. DATA TABLE (Scrolls sideways on small screens) -->
+      <div class="card p-0 overflow-hidden mb-6">
+        <div class="p-5 border-b border-slate-200 flex justify-between items-center">
+          <h2 class="text-lg font-semibold text-slate-800">Recent Transactions</h2>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 text-slate-500 text-sm uppercase tracking-wider border-b border-slate-200">
+                <th class="px-6 py-4 font-medium">Transaction ID</th>
+                <th class="px-6 py-4 font-medium">Customer</th>
+                <th class="px-6 py-4 font-medium">Date</th>
+                <th class="px-6 py-4 font-medium">Amount</th>
+                <th class="px-6 py-4 font-medium">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-sm">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-001</td>
+                <td class="px-6 py-4 text-slate-600">Sarah Jenkins</td>
+                <td class="px-6 py-4 text-slate-600">Oct 24, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$120.00</td>
+                <td class="px-6 py-4"><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-002</td>
+                <td class="px-6 py-4 text-slate-600">Michael Chen</td>
+                <td class="px-6 py-4 text-slate-600">Oct 23, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$450.50</td>
+                <td class="px-6 py-4"><span class="badge badge-warning">Pending</span></td>
+              </tr>
+              <!-- 4 more rows to meet the 6-row requirement -->
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-003</td>
+                <td class="px-6 py-4 text-slate-600">Emma Watson</td>
+                <td class="px-6 py-4 text-slate-600">Oct 23, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$85.00</td>
+                <td class="px-6 py-4"><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-004</td>
+                <td class="px-6 py-4 text-slate-600">James Smith</td>
+                <td class="px-6 py-4 text-slate-600">Oct 22, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$1,200.00</td>
+                <td class="px-6 py-4"><span class="badge bg-red-100 text-red-800">Failed</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-005</td>
+                <td class="px-6 py-4 text-slate-600">Olivia Brown</td>
+                <td class="px-6 py-4 text-slate-600">Oct 21, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$340.00</td>
+                <td class="px-6 py-4"><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 text-slate-900 font-medium">#TRX-006</td>
+                <td class="px-6 py-4 text-slate-600">William Davis</td>
+                <td class="px-6 py-4 text-slate-600">Oct 20, 2023</td>
+                <td class="px-6 py-4 text-slate-900 font-medium">$65.00</td>
+                <td class="px-6 py-4"><span class="badge badge-warning">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
