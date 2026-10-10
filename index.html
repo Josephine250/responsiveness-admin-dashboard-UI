@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/style.css" />
     <title>week3-tailwind</title>
   </head>
   <body class= " bg-white text-slate-200 dark:bg-slate-400 dark:text-blue-600">
@@ -20,11 +21,11 @@
     <!-- Navigation Links -->
     <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
       <a href="#" class="flex items-center gap-3 px-3 py-2 bg-emerald-50 text-emerald-600 rounded-lg font-medium transition-colors">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width=""></path></svg>
         Dashboard
       </a>
       <a href="#" class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-emerald-600 rounded-lg font-medium transition-colors">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 "></path></svg>
         Users
       </a>
       <a href="#" class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-emerald-600 rounded-lg font-medium transition-colors">
@@ -157,7 +158,164 @@
           </table>
         </div>
       </div>
+        <!-- BOTTOM PANELS: 1 column on mobile, 2 columns side-by-side on large screens -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+  
+  <!-- PANEL 1: Recent Activity -->
+  <div class="card">
+    <h2 class="text-lg font-bold text-slate-800 mb-4">Recent Activity</h2>
+    
+    <!-- space-y-5 automatically adds vertical space between every item in the list -->
+    <div class="space-y-5">
+      
+      <!-- Activity Item 1 -->
+      <div class="flex gap-4">
+        <!-- Status Dot -->
+        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0"></div>
+        <div>
+          <p class="text-sm font-semibold text-slate-800">New order #8924 received</p>
+          <p class="text-xs text-slate-500 mt-0.5">2 minutes ago</p>
+        </div>
+      </div>
+
+      <!-- Activity Item 2 -->
+      <div class="flex gap-4">
+        <!-- Status Dot -->
+        <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
+        <div>
+          <p class="text-sm font-semibold text-slate-800">Payment of $450 processed</p>
+          <p class="text-xs text-slate-500 mt-0.5">1 hour ago</p>
+        </div>
+      </div>
+
+      <!-- Activity Item 3 -->
+      <div class="flex gap-4">
+        <!-- Status Dot -->
+        <div class="w-2.5 h-2.5 rounded-full bg-slate-300 mt-1.5 shrink-0"></div>
+        <div>
+          <p class="text-sm font-semibold text-slate-800">System backup completed</p>
+          <p class="text-xs text-slate-500 mt-0.5">Yesterday at 4:30 PM</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- PANEL 2: Top Products (Progress Bars) -->
+  <div class="card">
+    <h2 class="text-lg font-bold text-slate-800 mb-4">Top Products</h2>
+    
+    <div class="space-y-5">
+      
+      <!-- Product 1 -->
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span class="font-medium text-slate-800">Nike Air Max</span>
+          <span class="text-emerald-600 font-semibold">75%</span>
+        </div>
+        <!-- The Background Track -->
+        <div class="w-full bg-slate-100 rounded-full h-2">
+          <!-- The Fill Progress -->
+          <div class="bg-emerald-500 h-2 rounded-full w-3/4"></div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span class="font-medium text-slate-800">Adidas Ultraboost</span>
+          <span class="text-emerald-600 font-semibold">60%</span>
+        </div>
+        <div class="w-full bg-slate-100 rounded-full h-2">
+          <div class="bg-emerald-500 h-2 rounded-full w-3/5"></div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span class="font-medium text-slate-800">Puma RS-X</span>
+          <span class="text-emerald-600 font-semibold">40%</span>
+        </div>
+        <div class="w-full bg-slate-100 rounded-full h-2">
+          <div class="bg-emerald-500 h-2 rounded-full w-2/5"></div>
+        </div>
+      </div>
+      
+       </div>
+       </div>
+
+     </div>
+        <!-- FORM PANEL: Add New User -->
+<div class="card mt-6">
+  <h2 class="text-lg font-bold text-slate-800 mb-4">Add New User</h2>
+  
+  <!-- Form Wrapper -->
+  <form action="#" method="POST" class="space-y-4">
+    
+    <!-- Labeled Input: Full Name -->
+    <div>
+      <label for="fullName" class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+      <input type="text" id="fullName" placeholder="Jane Doe" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+    </div>
+
+    <!-- Labeled Input: Email -->
+    <div>
+      <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+      <input type="email" id="email" placeholder="jane@example.com" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+    </div>
+
+    <!-- Select Dropdown: Role -->
+    <div>
+      <label for="role" class="block text-sm font-medium text-slate-700 mb-1">User Role</label>
+      <!-- Note: bg-white ensures the dropdown looks right across all browsers -->
+      <select id="role" class="w-full px-4 py-2 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+        <option value="admin">Administrator</option>
+        <option value="editor">Editor</option>
+        <option value="viewer" selected>Viewer</option>
+      </select>
+    </div>
+
+    <!-- Form Buttons -->
+    <div class="flex justify-end gap-3 pt-2">
+      <!-- Standard Secondary Button -->
+      <button class="px-4 py-2 bg-white text-slate-900 rounded-lg hover:bg-emerald-200 transition-colors">
+        cancel
+      </button>
+      
+      <!-- Primary Button (Using the @apply class you set up earlier!) -->
+       <button class="px-4 py-2 bg-white text-slate-900 rounded-lg hover:bg-emerald-200 transition-colors">
+        save
+      </button>
+        </div>
+
+       </form>
+      </div>
+    </main>
+<!-- ... your other dashboard content (forms, cards, etc.) ... -->
+
+      <!-- FOOTER START -->
+    <!-- FOOTER START -->
+      <footer class="mt-12 pt-6 border-t border-slate-200 flex flex-col items-center justify-center gap-6">
+        
+        <!-- Copyright Text -->
+        <p class="text-sm text-slate-500">
+          &copy; 2026 DashUI. All rights reserved.
+        </p>
+
+        <!-- Footer Links (Now stacked and centered) -->
+        <div class="flex flex-col items-center gap-3 text-sm font-medium text-slate-500">
+          <a href="#" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-emerald-600 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-emerald-600 transition-colors">Support</a>
+        </div>
+        
+      </footer>
+      <!-- FOOTER END -->
+
+  
+  
 
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
 </html>
