@@ -294,26 +294,3 @@ code {
     border-right-color: var(--border);
   }
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-  /* Component 1: The Card */
-  .card {
-    @apply bg-white border border-slate-200 rounded-xl shadow-sm p-6;
-  }
-
-  /* Component 2: Primary Button (Includes hover, focus, and transition!) */
-  .btn-primary {
-    @apply px-4 py-2 bg-brand text-white font-medium rounded-lg 
-           transition-all duration-200 
-           hover:bg-brand-dark 
-           focus:outline-none focus:ring-4 focus:ring-brand-light;
-  }
-
-  /* Component 3: Base Badge */
-  .badge {
-    @apply px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider;
-  }
-}
